@@ -1,0 +1,8 @@
+
+vi:
+  hello: "Xin chào mọi người"
+  web_name: "Sample app hướng dẫn Ruby on rails "
+  about: "Thông tin"
+  help: "Trợ giúp"
+  home: "Trang chủ"
+  help_page: "Đây là trang trợ giúp Rails Tutorial"
