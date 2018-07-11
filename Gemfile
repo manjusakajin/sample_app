@@ -10,6 +10,7 @@ gem "coffee-rails", "~> 4.2"
 gem "config"
 gem "i18n"
 gem "jbuilder", "~> 2.5"
+gem "jquery-rails"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.0"
 gem "rubocop", "~> 0.54.0", require: false
