@@ -12,5 +12,13 @@ en:
   english: "English"
   vietnamese: "Vietnamese"
   news: "News"
+  create_account: "Create my account"
+  comfirm: "Confirmation"
+  name: "Name"
+  email: "Email"
+  password: "Password"
   app: "Sample app"
   login: "Log in"
+  error:
+    find_user: "Can't find user"
+    create_user: "Can't create user"
