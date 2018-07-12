@@ -8,7 +8,9 @@ class User < ApplicationRecord
     length: {maximum: Settings.email.maximum},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :password, presence: true,
-    length: {minimum: Settings.password.minimum}
+    length: {minimum: Settings.password.minimum}, allow_nil: true
+
+  scope :select_user, ->{select(:id, :name, :email, :admin).order(:name)}
 
   has_secure_password
 
@@ -24,6 +26,10 @@ class User < ApplicationRecord
     end
   end
 
+  def is_admin?
+    admin
+  end
+
   def remember
     self.remember_token = User.new_token
     update_attribute :remember_digest, User.digest(remember_token)
@@ -36,6 +42,10 @@ class User < ApplicationRecord
   def authenticated? remember_token
     return false if remember_digest.nil?
     BCrypt::Password.new(remember_digest).is_password? remember_token
+  end
+
+  def is_user? user
+    self == user
   end
 
   private

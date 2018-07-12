@@ -31,3 +31,19 @@ vi:
     find_user: "Không thể tìm được tài khoản"
     create_user: "Không thành công hãy tạo lại"
     login: "Tên đăng nhập hoặc mật khẩu không đúng"
+    update: "Cập nhật không thành công"
+    wrong_user: "Tài khoản không đúng"
+    delete: "Chỉ có tài khoản admin mới có quyền xóa"
+  edit:
+    title: "Chỉnh sửa tào khoản"
+    button: "Lưu thay đổi"
+    update: "Cập nhật thông tin người dùng"
+  change: "Thay đổi"
+  success:
+    update: "Cập nhật thành công"
+    delete: "Đã xóa"
+  warning:
+    login: "Hãy đăng nhập"
+  delete: "Xóa"
+  confirm_ask: "Chắc không ?"
+  all_user: "Danh sách tài khoản"

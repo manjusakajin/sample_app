@@ -30,3 +30,19 @@ en:
     find_user: "Can't find user"
     create_user: "Can't create user"
     login: "Invalid email/password combination"
+    update: "Update fail"
+    wrong_user: "Wrong User"
+    delete: "Just admin can delete account"
+  edit:
+    title: "Edit user"
+    button: "Save changes"
+    update: "Update your profile"
+  change: "Change"
+  success:
+    update: "Update success"
+    delete: "User deleted"
+  warning:
+    login: "Please login"
+  delete: "Delete"
+  confirm_ask: "Are you sure ?"
+  all_user: "All Users"
