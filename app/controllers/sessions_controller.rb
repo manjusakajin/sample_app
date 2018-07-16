@@ -4,14 +4,19 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    unless @user&.authenticate(params[:session][:password])
+    if check_user
+      if @user.activated?
+        log_in @user
+        params[:session][:remember_me] == "1" ? remember(@user) : forget(@user)
+        redirect_back_or @user
+      else
+        flash[:warning] = t "warning.message"
+        redirect_to root_url
+      end
+    else
       flash.now[:danger] = t "error.login"
       render :new
-      return
     end
-    log_in @user
-    params[:session][:remember_me] == "1" ? remember(@user) : forget(@user)
-    redirect_back_or @user
   end
 
   def destroy
@@ -24,5 +29,9 @@ class SessionsController < ApplicationController
     @user = User.find_by email: params[:session][:email].downcase
     flash.now[:danger] = t "error.find_user" unless @user
     render :new unless @user
+  end
+
+  def check_user
+    @user&.authenticate(params[:session][:password])
   end
 end
