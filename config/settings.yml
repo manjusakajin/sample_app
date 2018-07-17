@@ -6,3 +6,5 @@ email:
   maximum: 255
 paginate:
   per_page: 20
+time:
+  expired_time: 2
