@@ -8,3 +8,7 @@ paginate:
   per_page: 20
 time:
   expired_time: 2
+content:
+  maximum: 140
+picture:
+  min_size: 5 
