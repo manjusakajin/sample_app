@@ -1,4 +1,3 @@
-
 en:
   hello: "Hello world"
   web_name: "Ruby on Rails Tutorial Sample App"
@@ -32,6 +31,7 @@ en:
     login: "Invalid email/password combination"
     update: "Update fail"
     wrong_user: "Wrong User"
+    activate: "Invalid activation link"
     delete: "Just admin can delete account"
   edit:
     title: "Edit user"
@@ -41,8 +41,13 @@ en:
   success:
     update: "Update success"
     delete: "User deleted"
+    active: "Account activated"
   warning:
     login: "Please login"
+    message: "Account not activated. Check your email for the activation link."
   delete: "Delete"
   confirm_ask: "Are you sure ?"
   all_user: "All Users"
+  check_active: "Please check your email to active account"
+  account_active: "Account Activation"
+  active: "Activate"
