@@ -22,7 +22,10 @@ class UsersController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @microposts =
+      @user.microposts.page(params[:page]).per Settings.paginate.per_page
+  end
 
   def edit; end
 

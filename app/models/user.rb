@@ -12,10 +12,13 @@ class User < ApplicationRecord
   validates :password, presence: true,
     length: {minimum: Settings.password.minimum}, allow_nil: true
 
+  has_many :microposts, dependent: :destroy
+
   lam = lambda do
     select(:id, :name, :email, :admin)
       .where(activated: true).order(:name)
   end
+
   scope :select_user, ->{lam.call}
 
   has_secure_password
@@ -36,6 +39,10 @@ class User < ApplicationRecord
     self.reset_token = User.new_token
     update_attributes(reset_digest: User.digest(reset_token),
       reset_sent_at: Time.zone.now)
+  end
+
+  def feed
+    Micropost.where "user_id = ?", id
   end
 
   def send_password_reset_mail

@@ -35,6 +35,7 @@ en:
     delete: "Just admin can delete account"
     send_mail_reset: "Email address not found"
     expired: "Password reset has expired."
+    micropost_delete: "Delete Fail"
   edit:
     title: "Edit user"
     button: "Save changes"
@@ -60,3 +61,6 @@ en:
   reset_pass: "Reset Password"
   submit: "Submit"
   pass_update: "Update Password"
+  micropost:
+    create: "Micropost created!"
+    delete: "Micropost deleted"
